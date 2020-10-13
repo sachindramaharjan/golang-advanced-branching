@@ -90,11 +90,11 @@ func main() {
 	for _, veh := range inventory {
 		switch v := veh.(type) {
 		case car:
-			v.carDetail()
+			v.carDetails()
 		case bike:
-			v.bikeDetail()
+			v.bikeDetails()
 		case truck:
-			v.truckDetail()
+			v.truckDetails()
 		default:
 			fmt.Printf("Are you sure this vehicle exists")
 		}
@@ -131,17 +131,17 @@ func showRating(model string) {
 	}
 }
 
-func (c *car) carDetail() {
+func (c *car) carDetails() {
 	fmt.Printf("\n%-5v: %-8v: %-12v ", "Car", c.make, c.model)
 	showRating(c.model)
 }
 
-func (b *bike) bikeDetail() {
+func (b *bike) bikeDetails() {
 	fmt.Printf("\n%-5v: %-8v: %-12v ", "Bike", b.make, b.model)
 	showRating(b.model)
 }
 
-func (t *truck) truckDetail() {
+func (t *truck) truckDetails() {
 	fmt.Printf("\n%-5v: %-8v: %-12v ", "Truck", t.make, t.model)
 	showRating(t.model)
 }

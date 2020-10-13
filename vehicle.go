@@ -13,20 +13,20 @@ type vehicle interface {
 }
 
 type car struct {
-	make        string
 	model       string
+	make        string
 	typeVehicle string
 }
 
 type truck struct {
-	make        string
 	model       string
+	make        string
 	typeVehicle string
 }
 
 type bike struct {
-	make  string
 	model string
+	make  string
 }
 
 // Values array for the feedback.json file
